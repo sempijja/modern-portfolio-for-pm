@@ -63,37 +63,37 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: "Senior Product Manager",
-      company: "TechCorp Solutions",
-      period: "2021 - Present",
+      title: "Product Manager",
+      company: "Lyanda Technologies Limited, Kampala",
+      period: "August 2024 - Present",
       description: [
-        "Led the end-to-end product development of the company's flagship analytics platform resulting in 45% revenue growth",
-        "Managed a cross-functional team of 15 people across engineering, design, and marketing",
-        "Conducted regular user research sessions and translated insights into product requirements",
-        "Developed and maintained the product roadmap with quarterly OKRs aligned with company strategy"
+        "Led cross-functional teams in agile product development, achieving 95% adherence to project timelines and delivering 3 major product updates aligned with organizational strategy",
+        "Spearheaded user-centric product development by conducting surveys with industry-leading partners and over 200 potential users, resulting in 20% improvement in data-driven decision-making",
+        "Authored 20+ targeted blog articles, driving a 25% increase in website traffic and enhancing organizational visibility",
+        "Acted as the primary liaison between development, marketing and management to ensure alignment on priorities"
       ],
       isActive: true
     },
     {
       title: "Product Owner",
-      company: "Innovate Digital",
-      period: "2018 - 2021",
+      company: "Codeplay UG, Kampala",
+      period: "August 2023 - August 2024",
       description: [
-        "Served as product owner for 3 agile development teams using Scrum methodology",
-        "Defined and prioritized product backlog items and user stories",
-        "Collaborated with UX/UI designers to create intuitive user experiences",
-        "Implemented data-driven decision-making processes, improving feature adoption by 35%"
+        "Mentored 40 interns in Scrum methodologies and project management tools, designing a grading system that resulted in 100% certification success",
+        "Coordinated recruitment efforts for 100+ applicants, successfully filling key roles in Product Management and Agile teams",
+        "Developed backlogs for 2 products, improving development efficiency by 15% through effective sprint planning and retrospective meetings",
+        "Met all project deadlines while maintaining high quality standards through rigorous backlog refinement"
       ]
     },
     {
-      title: "Associate Product Manager",
-      company: "Global Tech Services",
-      period: "2016 - 2018",
+      title: "Procurement Intern",
+      company: "Mukono District Local Government, Uganda",
+      period: "December 2023 - February 2024",
       description: [
-        "Assisted in the development and launch of a mobile application with 100,000+ downloads",
-        "Conducted competitor analysis and market research to identify product opportunities",
-        "Collaborated with engineering teams to ensure timely delivery of product features",
-        "Analyzed user feedback and product metrics to guide feature improvements"
+        "Spearheaded the consolidation of procurement requisitions from multiple departments into a streamlined Excel tracking system",
+        "Enhanced efficiency and data accuracy for the procurement process through systematic organization",
+        "Optimized the organization's solicitation processes through the EGP system, ensuring compliance with procurement regulations",
+        "Developed robust evaluation criteria for procurement assessments, improving the accuracy and fairness of vendor selection"
       ]
     }
   ];

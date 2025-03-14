@@ -55,32 +55,37 @@ const EducationItem: React.FC<EducationItemProps> = ({
 const Education: React.FC = () => {
   const educationItems = [
     {
-      degree: "MBA, Product Management",
-      institution: "University of Technology",
-      period: "2014 - 2016",
+      degree: "Bachelor's Degree in Procurement and Logistics Management",
+      institution: "Kyambogo University, Uganda",
+      period: "2020 - 2024",
       achievements: [
-        "Graduated with distinction (3.8 GPA)",
-        "President of Product Management Club",
-        "Thesis: 'Impact of User-Centered Design on SaaS Product Adoption'"
-      ]
-    },
-    {
-      degree: "Bachelor of Science, Computer Science",
-      institution: "State University",
-      period: "2010 - 2014",
-      achievements: [
-        "Minor in Business Administration",
-        "Dean's List (7 semesters)",
-        "Participated in national hackathon competition, placed 2nd"
+        "Specialized in procurement processes and supply chain management",
+        "Developed expertise in contract negotiation and vendor relationship management",
+        "Applied procurement principles to real-world business scenarios"
       ]
     }
   ];
 
   const certifications = [
-    "Certified Scrum Product Owner (CSPO) - Scrum Alliance",
-    "Professional Agile Leadership (PAL) - Scrum.org",
-    "Product Management Certification - Product School",
-    "Google Analytics Certification",
+    "Google Project Management Certification",
+    "Agile Project Management",
+    "Scrum Fundamentals",
+    "Product Management Essentials"
+  ];
+
+  const skills = [
+    "Agile Methodologies (Scrum, Kanban)",
+    "Product Roadmapping",
+    "Backlog Prioritization",
+    "User Story Mapping",
+    "Sprint Planning",
+    "Stakeholder Management",
+    "User Research",
+    "Market Analysis",
+    "JIRA & Confluence",
+    "Trello, Asana, Monday, Notion",
+    "Microsoft Office Suite",
+    "Data-Driven Decision Making"
   ];
 
   return (
@@ -91,7 +96,7 @@ const Education: React.FC = () => {
           subtitle="Academic Background"
         />
         
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <div className="grid md:grid-cols-1 gap-6 mb-16">
           {educationItems.map((item, index) => (
             <EducationItem 
               key={index} 
@@ -103,20 +108,36 @@ const Education: React.FC = () => {
           ))}
         </div>
         
-        <div className="max-w-2xl mx-auto">
-          <h3 className="font-display text-2xl font-bold text-center mb-6">Professional Certifications</h3>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div>
+            <h3 className="font-display text-2xl font-bold text-center mb-6">Professional Certifications</h3>
+            
+            <div className="glass-panel p-6 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <ul className="grid gap-4">
+                {certifications.map((cert, i) => (
+                  <li key={i} className="flex items-start">
+                    <div className="mr-3 mt-0.5 text-blue-600">
+                      <Award size={18} />
+                    </div>
+                    <span className="text-gray-700">{cert}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
           
-          <div className="glass-panel p-6 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <ul className="grid md:grid-cols-2 gap-4">
-              {certifications.map((cert, i) => (
-                <li key={i} className="flex items-start">
-                  <div className="mr-3 mt-0.5 text-blue-600">
-                    <Award size={18} />
-                  </div>
-                  <span className="text-gray-700">{cert}</span>
-                </li>
-              ))}
-            </ul>
+          <div>
+            <h3 className="font-display text-2xl font-bold text-center mb-6">Professional Skills</h3>
+            
+            <div className="glass-panel p-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill, i) => (
+                  <span key={i} className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
