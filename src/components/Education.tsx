@@ -2,6 +2,7 @@
 import React from 'react';
 import SectionHeading from './SectionHeading';
 import { GraduationCap, Award, Calendar } from 'lucide-react';
+import { Badge } from './ui/badge';
 
 interface EducationItemProps {
   degree: string;
@@ -52,6 +53,22 @@ const EducationItem: React.FC<EducationItemProps> = ({
   </div>
 );
 
+// Define skill colors for the badges
+const skillColors = [
+  "bg-blue-100 text-blue-700",
+  "bg-purple-100 text-purple-700",
+  "bg-green-100 text-green-700",
+  "bg-rose-100 text-rose-700",
+  "bg-amber-100 text-amber-700",
+  "bg-indigo-100 text-indigo-700",
+  "bg-pink-100 text-pink-700",
+  "bg-cyan-100 text-cyan-700",
+  "bg-violet-100 text-violet-700",
+  "bg-emerald-100 text-emerald-700",
+  "bg-fuchsia-100 text-fuchsia-700",
+  "bg-teal-100 text-teal-700",
+];
+
 const Education: React.FC = () => {
   const educationItems = [
     {
@@ -87,6 +104,9 @@ const Education: React.FC = () => {
     "Microsoft Office Suite",
     "Data-Driven Decision Making"
   ];
+
+  // Function to get a color for a skill based on its index
+  const getSkillColor = (index: number) => skillColors[index % skillColors.length];
 
   return (
     <section id="education" className="bg-white">
@@ -132,9 +152,12 @@ const Education: React.FC = () => {
             <div className="glass-panel p-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill, i) => (
-                  <span key={i} className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
+                  <Badge 
+                    key={i} 
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${getSkillColor(i)}`}
+                  >
                     {skill}
-                  </span>
+                  </Badge>
                 ))}
               </div>
             </div>
