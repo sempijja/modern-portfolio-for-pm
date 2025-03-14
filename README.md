@@ -1,4 +1,7 @@
-# Welcome to your Lovable project
+
+# Luwaga Meshach (Mulinsike) - Professional Portfolio
+
+A modern, professional portfolio showcasing Luwaga Meshach's experience and skills as a Project Manager and Product Owner.
 
 ## Project info
 
@@ -36,23 +39,9 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Technologies Used
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
@@ -60,10 +49,6 @@ This project is built with .
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/b39266f1-06d7-434d-a834-1bd6b825a925) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is configured to automatically deploy to GitHub Pages when changes are pushed to the main branch.
