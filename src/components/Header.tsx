@@ -21,6 +21,14 @@ const Header: React.FC<HeaderProps> = ({ name, title, avatarSrc }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="w-full min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
       <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -36,6 +44,7 @@ const Header: React.FC<HeaderProps> = ({ name, title, avatarSrc }) => {
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase()}`}
+                    onClick={scrollToSection(item.toLowerCase())}
                     className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     {item}
@@ -61,12 +70,14 @@ const Header: React.FC<HeaderProps> = ({ name, title, avatarSrc }) => {
         <div className="mt-12 flex space-x-4">
           <a 
             href="#contact"
+            onClick={scrollToSection("contact")}
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-md hover:shadow-lg"
           >
             Contact Me
           </a>
           <a 
             href="#about"
+            onClick={scrollToSection("about")}
             className="px-6 py-3 bg-white text-gray-800 font-medium rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
           >
             Learn More
@@ -75,7 +86,11 @@ const Header: React.FC<HeaderProps> = ({ name, title, avatarSrc }) => {
       </div>
 
       <div className="absolute bottom-10 w-full flex justify-center animate-pulse">
-        <a href="#about" className="text-gray-400 hover:text-gray-600 transition-colors">
+        <a 
+          href="#about" 
+          onClick={scrollToSection("about")}
+          className="text-gray-400 hover:text-gray-600 transition-colors"
+        >
           <ChevronDown size={32} />
         </a>
       </div>
