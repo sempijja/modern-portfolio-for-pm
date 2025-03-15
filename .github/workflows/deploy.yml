@@ -39,10 +39,16 @@ jobs:
       - name: Install lovable-tagger
         run: npm install lovable-tagger --save-dev
         
+      - name: Check GitHub Pages base path
+        run: |
+          echo "Current base path in vite.config.ts:"
+          grep -n "base:" vite.config.ts
+        
       - name: Build
         run: npm run build
         env:
           VITE_APP_TITLE: "Luwaga Meshach (Mulinsike)"
+          BASE_URL: "./"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
