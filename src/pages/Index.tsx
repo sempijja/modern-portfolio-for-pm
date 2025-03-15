@@ -47,7 +47,7 @@ const Index = () => {
       <Header 
         name="Luwaga Meshach (Mulinsike)" 
         title="Project Manager | Product Owner | Kampala, Uganda" 
-        avatarSrc="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+        avatarSrc="https://www.linkedin.com/in/meshach-luwaga-268741286/overlay/photo/" 
       />
       <About />
       <Experience />
