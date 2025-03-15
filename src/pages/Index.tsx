@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import About from '../components/About';
@@ -6,6 +5,9 @@ import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
 import { Helmet } from 'react-helmet-async';
+
+// Import the photo from the assets folder
+import profilePhoto from '../assets/avatar.jpeg';
 
 const Index = () => {
   // Lazy loading for images
@@ -33,8 +35,8 @@ const Index = () => {
     <div className="scroll-smooth">
       <Helmet>
         <title>Luwaga Meshach (Mulinsike) | Project Manager | Product Owner | Kampala, Uganda</title>
-        <meta name="description" content="Experienced Project Manager and Product Owner with expertise in Agile methodologies, product strategy, and cross-functional team leadership. Based in Kampala, Uganda." />
-        <meta name="keywords" content="Project Manager, Product Owner, Product Manager, Agile, Scrum, Jira, Trello, Asana, Monday, Notion, Kampala, Uganda, Google Project Management, Backlogs, Sprint Planning, Product Strategy, Tech Industry, Cross-functional teams" />
+        <meta name="description" content="Experienced Project Manager and Product Owner with expertise in Agile methodologies, product strategy, and cross-functional team leadership. Based in Kampala,[...]
+        <meta name="keywords" content="Project Manager, Product Owner, Product Manager, Agile, Scrum, Jira, Trello, Asana, Monday, Notion, Kampala, Uganda, Google Project Management, Backlogs, Sprint [...]
         {/* Open Graph / Social Media Meta Tags */}
         <meta property="og:title" content="Luwaga Meshach (Mulinsike) | Project Manager | Product Owner" />
         <meta property="og:description" content="Bridging the gap between strategic vision and flawless execution to deliver products that drive measurable results." />
@@ -47,7 +49,7 @@ const Index = () => {
       <Header 
         name="Luwaga Meshach (Mulinsike)" 
         title="Project Manager | Product Owner | Kampala, Uganda" 
-        avatarSrc="https://www.linkedin.com/in/meshach-luwaga-268741286/overlay/photo/" 
+        avatarSrc={profilePhoto} 
       />
       <About />
       <Experience />
