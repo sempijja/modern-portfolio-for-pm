@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import About from '../components/About';
@@ -35,8 +36,8 @@ const Index = () => {
     <div className="scroll-smooth">
       <Helmet>
         <title>Luwaga Meshach (Mulinsike) | Project Manager | Product Owner | Kampala, Uganda</title>
-        <meta name="description" content="Experienced Project Manager and Product Owner with expertise in Agile methodologies, product strategy, and cross-functional team leadership. Based in Kampala,[...]
-        <meta name="keywords" content="Project Manager, Product Owner, Product Manager, Agile, Scrum, Jira, Trello, Asana, Monday, Notion, Kampala, Uganda, Google Project Management, Backlogs, Sprint [...]
+        <meta name="description" content="Experienced Project Manager and Product Owner with expertise in Agile methodologies, product strategy, and cross-functional team leadership. Based in Kampala, Uganda." />
+        <meta name="keywords" content="Project Manager, Product Owner, Product Manager, Agile, Scrum, Jira, Trello, Asana, Monday, Notion, Kampala, Uganda, Google Project Management, Backlogs, Sprint Planning" />
         {/* Open Graph / Social Media Meta Tags */}
         <meta property="og:title" content="Luwaga Meshach (Mulinsike) | Project Manager | Product Owner" />
         <meta property="og:description" content="Bridging the gap between strategic vision and flawless execution to deliver products that drive measurable results." />
